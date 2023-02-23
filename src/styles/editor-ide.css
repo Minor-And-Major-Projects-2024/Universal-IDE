@@ -1,0 +1,29 @@
+.reflex-container > .reflex-splitter {
+  background: #2b2d33 !important;
+  transition: all 0.2s ease !important;
+}
+
+.reflex-container > .reflex-splitter.active,
+.reflex-container > .reflex-splitter:hover {
+  background: #003983 !important;
+}
+
+.horizontal > .reflex-splitter {
+  border: none !important;
+  height: 6px !important;
+}
+
+.reflex-container.horizontal > .reflex-splitter:hover,
+.reflex-container.horizontal > .reflex-splitter.active {
+  border: none !important;
+}
+
+.reflex-container.vertical > .reflex-splitter {
+  border: none !important;
+  width: 6px !important;
+}
+
+.reflex-container.vertical > .reflex-splitter:hover,
+.reflex-container.vertical > .reflex-splitter.active {
+  border: none !important;
+}

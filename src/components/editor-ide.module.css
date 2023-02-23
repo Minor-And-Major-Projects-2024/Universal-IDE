@@ -1,0 +1,31 @@
+.editorCont {
+    height: 500px;
+    background: #1e1e1e;
+    color: white;
+  }
+  
+  .hiddenFlow {
+    overflow: hidden!important;
+  }
+  
+  .terminal {
+    height: 500px;
+  }
+  
+  .overlay {
+    box-shadow: rgba(0, 0, 0, 0.5);
+    background: rgba(255, 255, 255, 0.1);
+    padding: 4px 8px;
+    font-size: 6px;
+  }
+  
+  .cursortd {
+    cursor: row-resize!important;
+  }
+  
+  .run {
+    padding: 8px 32px;
+    font-size: 1.1rem;
+    margin: 4px;
+    font-weight: bolder;
+  }

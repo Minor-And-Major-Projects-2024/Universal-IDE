@@ -3,26 +3,26 @@ export const langs: any = {
     monaco: 'javascript',
     name: 'JavaScript',
   },
-  // rs: {
-  //   monaco: 'rust',
-  //   name: 'Rust',
-  // },
-  // cpp: {
-  //   monaco: 'cpp',
-  //   name: 'C++',
-  // },
-  // py: {
-  //   monaco: 'python',
-  //   name: 'Python',
-  // },
+  rs: {
+    monaco: 'rust',
+    name: 'Rust',
+  },
+  cpp: {
+    monaco: 'cpp',
+    name: 'C++',
+  },
+  py: {
+    monaco: 'python',
+    name: 'Python',
+  },
   sh: {
     monaco: 'shell',
     name: 'Bash',
   },
-  // rb: {
-  //   monaco: 'ruby',
-  //   name: 'Ruby',
-  // },
+  rb: {
+    monaco: 'ruby',
+    name: 'Ruby',
+  },
   // cs: {
   //   monaco: 'csharp',
   //   name: 'C#',
@@ -35,22 +35,22 @@ export const langs: any = {
   //   monaco: 'quiken',
   //   name: 'CookeyLang',
   // },
-  // c: {
-  //   monaco: 'cpp',
-  //   name: 'C',
-  // },
-  // go: {
-  //   monaco: 'go',
-  //   name: 'Golang',
-  // },
+  c: {
+    monaco: 'cpp',
+    name: 'C',
+  },
+  go: {
+    monaco: 'go',
+    name: 'Golang',
+  },
   // r: {
   //   monaco: 'r',
   //   name: 'R',
   // },
-  // java: {
-  //   monaco: 'java',
-  //   name: 'Java',
-  // },
+  java: {
+    monaco: 'java',
+    name: 'Java',
+  },
   // php: {
   //   monaco: 'php',
   //   name: 'PHP',

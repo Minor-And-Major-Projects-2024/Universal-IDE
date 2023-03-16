@@ -1,4 +1,4 @@
-import { addLang } from '../lib/cookeylang-support';
+import { addLang } from '../../lib/cookeylang-support';
 import Editor from '@monaco-editor/react';
 
 export default function CodeEditorWriter({

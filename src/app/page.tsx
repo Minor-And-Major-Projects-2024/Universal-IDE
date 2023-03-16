@@ -3,7 +3,7 @@ import { Navbar } from '@/components/navbar/navbar';
 
 export default function Home() {
   return (
-    <div className="bg-red-400 h-screen w-full overflow-hidden">
+    <div className="bg-black h-screen w-full overflow-hidden">
       <Navbar />
       <Language />
     </div>

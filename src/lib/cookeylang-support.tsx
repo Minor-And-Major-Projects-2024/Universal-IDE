@@ -1,7 +1,7 @@
-// credits to repl.it/@Coder100/Code-jam-10-the-one-we-won#public/editor.js
-// by me :)
-export function addLang(monaco) {
-  if (monaco.languages.getLanguages().findIndex((n) => n.id == 'quiken') > -1)
+export function addLang(monaco: any) {
+  if (
+    monaco.languages.getLanguages().findIndex((n: any) => n.id == 'quiken') > -1
+  )
     return;
 
   const quiken = {

@@ -7,6 +7,7 @@ interface ButtonProps extends HTMLAttributes<HTMLDivElement> {
   type: string;
 }
 
+// eslint-disable-next-line react/display-name
 const Button = forwardRef<HTMLDivElement, ButtonProps>(
   ({ children, isInline = true, type, className, ...props }, ref) => {
     return (

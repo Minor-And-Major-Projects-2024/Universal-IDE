@@ -5,6 +5,6 @@ const IDE = dynamic(() => import('../components/editor-ide'), {
   ssr: false,
 });
 
-export default function CodeEditor() {
+export default function CodeEditorApi() {
   return <IDE query={useRouter().query} />;
 }

@@ -16,8 +16,8 @@ interface SidebarProps {
   setIsOpen: React.Dispatch<React.SetStateAction<boolean>>;
 }
 
-const username = 'johndoe';
-const avatar = 'https://avatars.githubusercontent.com/u/89572392?v=4';
+const username = 'john doe';
+const avatar = 'https://avatars.githubusercontent.com/u/101614183?v=4';
 const description =
   'Only 8 words max limit is applied to the desasdasdasdasdasdasdascription. and more than that will be truncated.';
 const words = description.split(' ').slice(0, 8);

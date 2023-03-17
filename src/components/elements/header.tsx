@@ -7,7 +7,7 @@ export default function Header({
   shadow = false,
   className,
   ...props
-}) {
+}: any) {
   return (
     <div
       className={`${styles[size]} ${center ? styles.center : ''} ${

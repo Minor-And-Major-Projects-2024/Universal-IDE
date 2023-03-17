@@ -1,0 +1,105 @@
+.mainBody {
+  margin: 0;
+  padding: 0;
+}
+
+.editorbody {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  background: #000;
+  color: red;
+  border: 4px solid rgb(9, 132, 255);
+  border-radius: 5px;
+}
+
+.editorhead {
+  background: transparent;
+  color: #040cfe;
+  border: 4px solid rgb(21, 255, 9);
+  text-align: center;
+  justify-content: space-between;
+  align-items: center;
+  display: flex;
+  margin: 2px;
+  border-radius: 20px;
+  flex-direction: row;
+}
+
+.editorhead span {
+  color: red;
+}
+.editorhead h1 {
+  font-size: 1.2rem;
+  margin: 2px;
+  margin-left: 12px;
+}
+
+.editordisplay {
+  display: flex;
+  flex-direction: row;
+  height: 55vh;
+  margin-top: 2px;
+}
+
+.editor {
+  width: 100vw;
+  /* border: 4px solid rgb(220, 23, 206); */
+  font-size: 1.1rem;
+  font-family: monospace;
+  overflow: hidden;
+}
+
+.resultoutput {
+  height: 400px;
+  cursor: row-resize;
+  overflow: hidden;
+  /* border: 4px solid rgb(251, 107, 5); */
+}
+
+.resultinput {
+  height: 30px;
+  /* border: 4px solid rgb(4, 134, 23); */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+  overflow: hidden;
+}
+.resultpara {
+  text-align: center;
+  margin: 2px;
+  padding: 2px;
+}
+
+.editorMain {
+  display: flex;
+  background: #000;
+  flex-direction: column;
+}
+.editorOutput {
+  /* width: 100vw; */
+}
+.editorInput {
+  /* width: 100vw; */
+}
+
+.divider {
+  width: 100%;
+  background: #fcfcfb8e;
+}
+
+.btn {
+  background: #03f9c0;
+  color: #ff0202;
+  border: 3px solid #fb73038e;
+  border-radius: 5px;
+  padding: 5px;
+  margin: 4px;
+  margin-right: 12px;
+  cursor: pointer;
+  font-size: 1rem;
+  width: 40px;
+  font-weight: bolder;
+  transition: 0.3s;
+}

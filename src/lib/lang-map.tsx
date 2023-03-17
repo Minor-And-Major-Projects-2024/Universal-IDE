@@ -1,4 +1,4 @@
-export const langs = {
+export const langs: any = {
   js: {
     monaco: 'javascript',
     name: 'JavaScript',
@@ -23,18 +23,18 @@ export const langs = {
     monaco: 'ruby',
     name: 'Ruby',
   },
-  cs: {
-    monaco: 'csharp',
-    name: 'C#',
-  },
-  fs: {
-    monaco: 'fsharp',
-    name: 'F#',
-  },
-  clf: {
-    monaco: 'quiken',
-    name: 'CookeyLang',
-  },
+  // cs: {
+  //   monaco: 'csharp',
+  //   name: 'C#',
+  // },
+  // fs: {
+  //   monaco: 'fsharp',
+  //   name: 'F#',
+  // },
+  // clf: {
+  //   monaco: 'quiken',
+  //   name: 'CookeyLang',
+  // },
   c: {
     monaco: 'cpp',
     name: 'C',
@@ -43,36 +43,36 @@ export const langs = {
     monaco: 'go',
     name: 'Golang',
   },
-  r: {
-    monaco: 'r',
-    name: 'R',
-  },
+  // r: {
+  //   monaco: 'r',
+  //   name: 'R',
+  // },
   java: {
     monaco: 'java',
     name: 'Java',
   },
-  php: {
-    monaco: 'php',
-    name: 'PHP',
-  },
-  lua: {
-    monaco: 'lua',
-    name: 'Lua',
-  },
-  nim: {
-    monaco: 'nim',
-    name: 'Nim',
-  },
-  dart: {
-    monaco: 'dart',
-    name: 'Dart',
-  },
-  ts: {
-    monaco: 'typescript',
-    name: 'TypeScript (Deno)',
-  },
-  swift: {
-    monaco: 'swift',
-    name: 'Swift',
-  },
+  // php: {
+  //   monaco: 'php',
+  //   name: 'PHP',
+  // },
+  // lua: {
+  //   monaco: 'lua',
+  //   name: 'Lua',
+  // },
+  // nim: {
+  //   monaco: 'nim',
+  //   name: 'Nim',
+  // },
+  // dart: {
+  //   monaco: 'dart',
+  //   name: 'Dart',
+  // },
+  // ts: {
+  //   monaco: 'typescript',
+  //   name: 'TypeScript (Deno)',
+  // },
+  // swift: {
+  //   monaco: 'swift',
+  //   name: 'Swift',
+  // },
 };

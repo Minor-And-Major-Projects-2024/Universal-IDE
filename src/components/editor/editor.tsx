@@ -1,8 +1,12 @@
-import { addLang } from '../lib/cookeylang-support';
+import { addLang } from '../../lib/cookeylang-support';
 import Editor from '@monaco-editor/react';
 
-export default function CodeEditor({ setValue, runCode, ...props }) {
-  function handleEditorDidMount(editor, monaco) {
+export default function CodeEditorWriter({
+  setValue,
+  runCode,
+  ...props
+}: any): JSX.Element {
+  function handleEditorDidMount(editor: any, monaco: any) {
     addLang(monaco);
 
     if (runCode)
@@ -17,10 +21,8 @@ export default function CodeEditor({ setValue, runCode, ...props }) {
           // ctrl + enter
           monaco.KeyMod.CtrlCmd | monaco.KeyCode.Enter,
         ],
-
         contextMenuGroupId: 'navigation',
         contextMenuOrder: 1.5,
-
         run: runCode,
       });
   }
@@ -30,7 +32,7 @@ export default function CodeEditor({ setValue, runCode, ...props }) {
       theme={'vs-dark'}
       loading={'Loading...'}
       options={{
-        cursorSmoothCaretAnimation: true,
+        cursorSmoothCaretAnimation: 'on',
         tabSize: 2,
       }}
       onMount={handleEditorDidMount}

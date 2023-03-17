@@ -1,4 +1,4 @@
-export default async function handler(req, res) {
+export default async function handler(req: any, res: any) {
   fetch('https://WhaleBoat-Official-Language-Server-t.coder100.repl.co/', {
     method: 'POST',
     headers: {
@@ -8,14 +8,14 @@ export default async function handler(req, res) {
   })
     .then((r) =>
       !r.ok
-        ? res.end(`[WhaleBoat] Error: Language server could not be reached.`)
+        ? res.end(`[IDE] Error: Language server could not be reached.`)
         : r
     )
     .then((r) => r.text())
     .then((data) => res.end(data))
     .catch((err) =>
-      res.end(`[WhaleBoat] Error: ${err}
-  [WhaleBoat] Hint: Try re-running`)
+      res.end(`[IDE] Error: ${err}
+  [IDE] Hint: Try re-running`)
     );
 }
 

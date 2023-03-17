@@ -1,4 +1,4 @@
-export async function execCode(code, lang, stdin = '') {
+export async function execCode(code: any, lang: any, stdin = '') {
   return await fetch('/api/exec-code', {
     method: 'POST',
     headers: {

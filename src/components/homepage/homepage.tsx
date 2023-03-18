@@ -1,19 +1,20 @@
 'use client';
 import { useState } from 'react';
-import { FiMenu } from 'react-icons/fi';
+import { BsArrowBarRight } from 'react-icons/bs';
 import { Footer } from '../footer/footer';
 import Hero from '../hero/hero';
-import { Navbar } from '../navbar/navbar';
+import Navbar from '../navbar/navbar';
 import Sidebar from '../sidebar/sidebar';
-
 const Homepage = () => {
   const [isOpen, setIsOpen] = useState(false);
-
+  const username = 'john doe';
+  const avatar = 'https://avatars.githubusercontent.com/u/101614183?v=4';
   return (
-    <div className="bg-black overflow-hidden h-screen">
-      <Navbar />
+    <div className="bg-black h-screen max-sm:h-full overflow-hidden max-sm:overflow-visible">
+      <Navbar username={username} avatar={avatar} />
       {/* main-section */}
-      <div className="mx-2 h-[427.467px] flex flex-col lg:flex-row overflow-hidden rounded-lg text-xl text-red-600 border-4 bg-black border-solid border-purple-600">
+      <div className="mx-2 flex flex-col lg:flex-row rounded-lg text-xl text-red-600 ">
+        {/*FOR_DEVELOMENT h-[427.467px] max-sm:h-full overflow-hidden overflow-hidden */}
         {/* Profile-SideBar */}
         <Sidebar isOpen={isOpen} setIsOpen={setIsOpen} />
         {/* Profile-SideBar */}
@@ -21,12 +22,12 @@ const Homepage = () => {
         <Hero />
         <button
           title="sidebar"
-          className={`fixed bottom-0 right-0 z-50 block lg:hidden focus:outline-none ${
-            isOpen ? 'bg-gray-900 text-white' : 'bg-gray-100 text-black'
+          className={`fixed top-2/4 h-16 border-2 rounded-r-lg border-solid border-green-500 w-5 left-0  z-50 block lg:hidden focus:outline-none ${
+            isOpen ? 'bg-white hidden' : 'bg-black'
           }`}
           onClick={() => setIsOpen(!isOpen)}
         >
-          <FiMenu className="w-6 h-6 m-4" />
+          <BsArrowBarRight className="w-4 h-8 font-semibold text-red-500" />
         </button>
         {/* Hero-section */}
       </div>

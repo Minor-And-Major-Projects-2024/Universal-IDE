@@ -10,6 +10,7 @@ import { FcQuestions } from 'react-icons/fc';
 import { TiTickOutline } from 'react-icons/ti';
 import { TfiLayoutListThumb } from 'react-icons/tfi';
 import { MdOutlineCreateNewFolder } from 'react-icons/md';
+import { RxCross1 } from 'react-icons/rx';
 
 interface SidebarProps {
   isOpen: boolean;
@@ -26,28 +27,28 @@ const truncatedDesc = words.join(' ');
 const Sidebar = ({ isOpen, setIsOpen }: SidebarProps) => {
   return (
     <div
-      className={`fixed z-50 h-full bg-black text-white w-full lg:w-1/5 lg:static lg:h-auto lg:flex-col lg:flex border-4 border-green-500 border-solid lg:justify-between ${
-        isOpen ? 'block' : 'hidden'
+      className={`fixed z-50 h-full bg-black text-white w-full lg:w-1/5 lg:static lg:h-auto lg:flex-col lg:flex border-2 max-sm:border-4 rounded-l-lg border-indigo-500 border-solid lg:justify-between ${
+        isOpen ? 'block top-0 left-0' : 'hidden'
       }`}
     >
       {/* for mobile screen */}
       <div className="flex justify-between items-center lg:hidden">
-        <h1 className="text-xl font-semibold px-4 py-3">My Sidebar</h1>
+        <h1 className="text-3xl font-semibold px-4 py-3">IDE</h1>
         <button
           title="sidebar"
           className="focus:outline-none px-4 py-3"
           onClick={() => setIsOpen(!isOpen)}
         >
-          <FiMenu className="w-6 h-6 text-red-500 hover:text-green-500 transition duration-150 ease-in-out" />
+          <RxCross1 className="w-8 h-8 text-red-500 hover:text-green-500 transition duration-150 ease-in-out" />
         </button>
       </div>
       {/* for mobile screen */}
       {/* For lg screen */}
-      <div className="flex-col lg:flex-grow lg:h-auto rounded-r-lg px-1 py-0.5">
+      <div className="flex-col lg:flex-grow lg:h-auto max-sm:h-screen max-sm:p-8 rounded-r-lg px-1 py-0.5">
         {/* profile-section */}
         <div
           id="profile-section"
-          className="flex flex-col h-5/12 items-center py-2 text-green-500"
+          className="flex flex-col h-5/12 items-center py-2 max-sm:space-y-3 text-green-500"
         >
           <Image
             src={avatar}
@@ -81,7 +82,7 @@ const Sidebar = ({ isOpen, setIsOpen }: SidebarProps) => {
         {/* project-section */}
         <div
           id="project-section"
-          className="flex flex-col h-5/12 my-2 space-y-2"
+          className="flex flex-col h-5/12 max-sm:my-4 my-2 space-y-2"
         >
           <div
             id="project-list"
@@ -112,7 +113,7 @@ const Sidebar = ({ isOpen, setIsOpen }: SidebarProps) => {
         {/* question-section */}
         <div
           id="question-section"
-          className="flex flex-col h-5/12 my-2 space-y-2"
+          className="flex flex-col h-5/12 my-2 max-sm:my-4 space-y-2"
         >
           <div
             id="attempted-question-list"
@@ -145,7 +146,7 @@ const Sidebar = ({ isOpen, setIsOpen }: SidebarProps) => {
         {/* sidebar-footer-section */}
         <div
           id="sidebar-footer-section"
-          className="flex flex-col h-max-2/12 mt-0.5 items-center justify-center p-1"
+          className="flex flex-col h-max-2/12 mt-0.5 max-sm:mt-20 max-sm:space-y-4 items-center justify-center p-1"
         >
           <div className="flex flex-row justify-center items-center space-x-4">
             <Image

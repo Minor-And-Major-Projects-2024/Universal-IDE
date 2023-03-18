@@ -89,7 +89,7 @@ const Sidebar = ({ isOpen, setIsOpen }: SidebarProps) => {
             className="w-full px-8 flex flex-row space-x-4 justify-between items-center border-2 border-green-500 border-solid rounded-lg p-0.5"
           >
             <Link
-              href={'#list'}
+              href={'/projects/projectlist'}
               className="flex flex-row space-x-2 items-center justify-center text-center"
             >
               <TfiLayoutListThumb className="w-4 h-4 text-white hover:text-red-500 transition duration-150 ease-in-out" />{' '}
@@ -101,7 +101,7 @@ const Sidebar = ({ isOpen, setIsOpen }: SidebarProps) => {
             className="w-full px-8 flex flex-row space-x-4 justify-between items-center border-2 border-green-500 border-solid rounded-lg p-0.5"
           >
             <Link
-              href={'#create'}
+              href={'/projects/projectlist'}
               className="flex flex-row justify-between items-center"
             >
               <MdOutlineCreateNewFolder className="w-4 h-4 text-white hover:text-red-500 transition duration-150 ease-in-out" />{' '}
@@ -120,7 +120,7 @@ const Sidebar = ({ isOpen, setIsOpen }: SidebarProps) => {
             className="w-full px-8 flex flex-row space-x-4 justify-between items-center border-2 border-green-500 border-solid rounded-lg p-0.5"
           >
             <Link
-              href={'#questions-attempted'}
+              href={'/questions/completedquest'}
               className="flex flex-row justify-between items-center"
             >
               <TiTickOutline className="w-4 h-4 text-white hover:text-red-500 transition duration-150 ease-in-out" />{' '}
@@ -134,7 +134,7 @@ const Sidebar = ({ isOpen, setIsOpen }: SidebarProps) => {
             className="mt-0.5 w-full px-8 flex flex-row space-x-4 justify-between items-center border-2 border-green-500 border-solid rounded-lg p-0.5"
           >
             <Link
-              href={'#practice'}
+              href={'/questions/practicequestions'}
               className="flex flex-row justify-between items-center"
             >
               <FcQuestions className="w-4 h-4 text-white hover:text-red-500 transition duration-150 ease-in-out" />{' '}

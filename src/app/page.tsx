@@ -1,11 +1,11 @@
-import { Language } from '@/components/language/language';
-import { Navbar } from '@/components/navbar/navbar';
+import { Demo } from '@/components/demo/demo';
+import Homepage from '@/components/homepage/homepage';
 
 export default function Home() {
   return (
-    <div className="bg-black h-screen w-full overflow-hidden">
-      <Navbar />
-      <Language />
-    </div>
+    <>
+      {/* <Demo /> */}
+      <Homepage />
+    </>
   );
 }

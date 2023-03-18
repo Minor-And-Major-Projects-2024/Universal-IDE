@@ -10,7 +10,8 @@ import { BiUser } from 'react-icons/bi';
 const Navbar = ({ username, avatar }: any) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isPromtOpen, setIsPromtOpen] = useState(false);
-  const isLoggedIn = true;
+  const [isLoggedIn, setIsLoggedIn] = useState(true);
+
   return (
     <div className="mb-1 mx-2 max-sm:px-2 text-3xl text-purple-500 text-center rounded-lg border-2 border-solid border-green-500  flex items-center justify-between px-1">
       {/* main-navbar-heading */}
@@ -23,7 +24,7 @@ const Navbar = ({ username, avatar }: any) => {
       </div>
       {/* lg-navbar-controls */}
       <div className="hidden md:flex flex-row justify-between w-1/5 items-center space-x-1 px-1 py-0.5 rounded-lg">
-        <Link href="/#signup">
+        <Link href="/auth/signup">
           <button
             title="signup"
             type="submit"
@@ -36,9 +37,9 @@ const Navbar = ({ username, avatar }: any) => {
             />
           </button>
         </Link>
-        <Link href="/#signin">
+        <Link href="/auth/signin">
           <button
-            title="logout"
+            title="signin"
             type="submit"
             className="border-2 rounded-lg px-1 border-solid border-red-500 flex flex-row items-center space-x-0.5"
           >
@@ -78,7 +79,7 @@ const Navbar = ({ username, avatar }: any) => {
                 <RxCross1 className="inline-block text-red-500 " size={30} />
               </button>
             </Link>
-            <Link href="/#signup">
+            <Link href="/auth/signup">
               <button
                 title="signup"
                 type="submit"
@@ -91,7 +92,7 @@ const Navbar = ({ username, avatar }: any) => {
                 />
               </button>
             </Link>
-            <Link href="/#signin">
+            <Link href="/auth/signin">
               <button
                 title="signin"
                 type="submit"
@@ -107,7 +108,7 @@ const Navbar = ({ username, avatar }: any) => {
             {/* navabr-user-controls */}
             {isLoggedIn ? (
               <>
-                <Link href="/#userprofile">
+                <Link href="/user/userprofile">
                   <button
                     title="user-prfile"
                     type="submit"
@@ -117,7 +118,7 @@ const Navbar = ({ username, avatar }: any) => {
                     <BiUser className="inline-block text-red-500" size={20} />
                   </button>
                 </Link>
-                <Link href="/#accountsettings">
+                <Link href="/user/accountsettings">
                   <button
                     title="settings"
                     type="submit"
@@ -130,10 +131,11 @@ const Navbar = ({ username, avatar }: any) => {
                     />
                   </button>
                 </Link>
-                <Link href="/#logout">
+                <Link href="/">
                   <button
                     title="logout"
                     type="submit"
+                    onClick={() => setIsLoggedIn(false)}
                     className="border-2 rounded-lg p-2 border-solid border-indigo-500 flex flex-row items-center space-x-1"
                   >
                     <span className="text-lg text-green-500">Logout</span>
@@ -151,7 +153,7 @@ const Navbar = ({ username, avatar }: any) => {
         </div>
       )}
       {/* prompt-comtrols */}
-      {isPromtOpen && (
+      {isPromtOpen && isLoggedIn && (
         <>
           <div className="absolute top-9 right-4 w-[200px] bg-black rounded-lg border-solid border-4 border-red-500 p-4  h-[200px] ">
             {isLoggedIn ? (
@@ -179,10 +181,11 @@ const Navbar = ({ username, avatar }: any) => {
                     />
                   </button>
                 </Link>
-                <Link href="/#logout">
+                <Link href="/">
                   <button
                     title="logout"
                     type="submit"
+                    onClick={() => setIsLoggedIn(false)}
                     className="border-2 rounded-lg p-2 border-solid border-indigo-500 flex flex-row items-center space-x-1"
                   >
                     <span className="text-lg text-green-500">Logout</span>

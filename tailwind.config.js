@@ -3,7 +3,7 @@
  */
 module.exports = {
   // can add jit if you want customization
-  // mode: 'jit',
+  mode: 'jit',
   content: [
     './app/**/*.{js,ts,jsx,tsx}',
     './pages/**/*.{js,ts,jsx,tsx}',

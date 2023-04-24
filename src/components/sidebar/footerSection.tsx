@@ -12,7 +12,7 @@ interface FooterSectionProps {
 
 const FooterSection = ({ avatar }: FooterSectionProps) => {
   return (
-    <div className="flex flex-col space-y-4 items-center py-2 px-4">
+    <div className="flex flex-col space-y-2 items-center py-2 px-4">
       <div className="flex flex-row justify-center items-center space-x-4">
         <Image
           src={avatar}

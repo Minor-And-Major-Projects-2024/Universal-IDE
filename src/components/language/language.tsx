@@ -3,11 +3,11 @@ import Link from 'next/link';
 
 export const Language = () => {
   return (
-    <div className="static h-3/6 space-y-2 items-center py-8 px-4">
+    <div className="static h-/6 space-y-2 items-center py-8 px-4">
       <h1 className="text-xl text-start px-2 max-sm:text-sm font-semibold text-white">
         Choose language for IDE to work with
       </h1>
-      <div className="flex flex-wrap justify-evenly h-72 overflow-y-auto shadow-xl shadow-[#1d1836] rounded-lg p-4">
+      <div className="flex flex-wrap justify-evenly h-68 overflow-y-auto shadow-xl shadow-[#1d1836] rounded-lg p-4">
         {Object.keys(langs)
           .sort((a, b) => (langs[b].name > langs[a].name ? -1 : 1))
           .map((lang, i) => (

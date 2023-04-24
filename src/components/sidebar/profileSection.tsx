@@ -18,7 +18,7 @@ const ProfileSection = ({
   truncatedDesc,
 }: ProfileSectionProps) => {
   return (
-    <div className="flex flex-col space-y-3 items-center py-2 px-4 max-sm:space-y-3">
+    <div className="flex flex-col space-y-2 items-center py-2 px-4 ">
       <Image
         src={avatar}
         alt="Avatar"

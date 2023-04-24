@@ -18,13 +18,13 @@ const truncatedDesc: string = words.join(' ');
 const Sidebar = ({ isOpen, setIsOpen }: SidebarProps) => {
   return (
     <div
-      className={`static w-full h-full lg:w-1/5 lg:flex lg:flex-col lg:justify-between border shadow-inner shadow-gray-700 ${
-        isOpen ? 'fixed top-0 left-0' : 'hidden'
+      className={`static w-full h-full lg:w-1/5 lg:flex lg:flex-col lg:justify-between border shadow-inner shadow-gray-700 overflow-y-scroll ${
+        isOpen ? 'bg-[#050816] h-screen fixed top-0 left-0 overflow-hidden' : 'hidden'
       }`}
     >
       {/* for below-medium screen */}
       <div className="flex flex-wrap justify-between items-center lg:hidden">
-        <h1 className="text-3xl font-semibold px-4 py-3">IDE</h1>
+        <h1 className="text-3xl font-semibold px-4 py-3 text-white">IDE</h1>
         <button
           title="sidebar"
           type="button"

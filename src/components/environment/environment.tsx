@@ -4,11 +4,10 @@ import Link from 'next/link';
 export const Environment = () => {
   return (
     <div className="static h-3/6 space-y-2 items-center py-8 px-4">
-      {/* h-3/6 w-full mt-0.5 max-sm:rounded-b-lg max-sm:py-2 */}
       <h1 className="text-xl text-start px-2 max-sm:text-sm font-semibold text-white">
         Create your own virtaul environment using
       </h1>
-      <div className="flex flex-wrap justify-evenly h-52 overflow-y-auto shadow-xl shadow-[#1d1836] rounded-lg p-4">
+      <div className="flex flex-wrap justify-evenly lg:h-36 lg:overflow-y-auto sm:h-full shadow-xl shadow-[#1d1836] rounded-lg p-4">
         {Object.keys(envs)
           .sort((a, b) => (envs[b].name > envs[a].name ? -1 : 1))
           .map((env, i) => (

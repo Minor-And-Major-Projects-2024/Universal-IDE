@@ -1,8 +1,8 @@
-import styles from './questions.module.css';
+import '../../styles/globals.css';
 
 const Practicequest = () => {
   return (
-    <div className={styles.home}>
+    <div className="text-white">
       <h1>Practice quest</h1>
     </div>
   );

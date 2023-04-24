@@ -45,8 +45,15 @@ const SigninScreen = () => {
   }, []);
 
   return (
-    <div className="bg-[#050816] border shadow-inner shadow-gray-700 h-screen p-6 md:p-32">
-      <div className="bg-[#1d1836] max-w-md mx-auto border rounded-lg hover:shadow-xl hover:shadow-[#915EFF] p-20">
+    <div className="bg-[#050816] border shadow-inner shadow-gray-700 lg:h-screen md:h-full max-sm:h-screen auth_body p-6 md:p-32">
+      <div className="bg-[#1d1836] max-w-md mx-auto border rounded-lg hover:shadow-xl hover:shadow-[#915EFF] p-20 auth_in_body">
+        <div
+          onClick={() => router.push('/')}
+          className="text-white font-bold shadow-xl text-center text-3xl mb-2 p-0.5"
+        >
+          {' '}
+          Universal IDE
+        </div>
         <form onSubmit={submitHandler}>
           <div className="mb-6">
             <label

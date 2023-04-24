@@ -79,12 +79,12 @@ const SigninScreen = () => {
 
   return (
     <div className="h-screen p-6 md:p-32">
-      <div className="max-w-md mx-auto border-2 hover:border-4 hover:border-gray-700 rounded shadow-xl">
+      <div className="max-w-md mx-auto border-2 hover:border-4 hover:border-gray-700 rounded shadow-xl p-20">
         <form onSubmit={submitHandler}>
-          <div className="mb-4">
+          <div className="mb-6">
             <label
               htmlFor="email"
-              className="block mb-2 font-bold text-gray-700"
+              className="block mb-2 font-bold text-white-700"
             >
               Email
             </label>
@@ -92,16 +92,16 @@ const SigninScreen = () => {
               type="email"
               id="email"
               placeholder="Enter email"
-              className="w-full px-3 py-2 border rounded"
+              className="w-full px-3 py-2 border rounded mt-2 mb-5"
               value={email}
               onChange={(e) => setEmail(e.target.value)}
               required
             />
           </div>
-          <div className="mb-4">
+          <div className="mb-6">
             <label
               htmlFor="password"
-              className="block mb-2 font-bold text-gray-700"
+              className="block mb-2 font-bold text-white-700"
             >
               Password
             </label>
@@ -109,7 +109,7 @@ const SigninScreen = () => {
               type="password"
               id="password"
               placeholder="Enter password"
-              className="w-full px-3 py-2 border rounded"
+              className="w-full px-3 py-2 border rounded mt-2 mb-9"
               value={password}
               onChange={(e) => setPassword(e.target.value)}
               required

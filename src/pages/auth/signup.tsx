@@ -52,15 +52,15 @@ const SignupScreen = () => {
   return (
 
     <div
-      className="h-screen p-6 md:p-32"
+      className="h-screen p-6 md:p-28"
      
     >
-      <div className="max-w-md mx-auto p-6 md:p-12 border-2 hover:border-4 hover:border-gray-700 rounded shadow-xl">
+      <div className="max-w-md mx-auto p-16 md:p-12 border-2 hover:border-4 hover:border-gray-700 rounded shadow-xl">
         <form onSubmit={submitHandler}>
-          <div className="mb-4">
+          <div className="mb-6">
             <label
               htmlFor="name"
-              className="block mb-2 font-bold text-gray-700"
+              className="block mb-2 font-bold text-white-700"
             >
               Name
             </label>
@@ -74,10 +74,10 @@ const SignupScreen = () => {
               required
             />
           </div>
-          <div className="mb-4">
+          <div className="mb-6">
             <label
               htmlFor="email"
-              className="block mb-2 font-bold text-gray-700"
+              className="block mb-2 font-bold text-white-700"
             >
               Email
             </label>
@@ -91,10 +91,10 @@ const SignupScreen = () => {
               required
             />
           </div>
-          <div className="mb-4">
+          <div className="mb-6">
             <label
               htmlFor="password"
-              className="block mb-2 font-bold text-gray-700"
+              className="block mb-2 font-bold text-white-700"
             >
               Password
             </label>
@@ -108,10 +108,10 @@ const SignupScreen = () => {
               required
             />
           </div>
-          <div className="mb-4">
+          <div className="mb-10">
             <label
               htmlFor="confirmPassword"
-              className="block mb-2 font-bold text-gray-700"
+              className="block mb-2 font-bold text-white-700"
             >
               Confirm Password
             </label>

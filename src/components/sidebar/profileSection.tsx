@@ -8,14 +8,14 @@ import {
 
 interface ProfileSectionProps {
   avatar: string;
-  username: string;
   truncatedDesc: string;
+  userInfo: any;
 }
 
 const ProfileSection = ({
   avatar,
-  username,
   truncatedDesc,
+  userInfo,
 }: ProfileSectionProps) => {
   return (
     <div className="flex flex-col space-y-2 items-center py-2 px-4 ">
@@ -27,7 +27,7 @@ const ProfileSection = ({
         className="rounded-full border-2 border-solid border-[#915EFF] hover:shadow-2xl hover:shadow-[#915EFF]"
       />
       <span className="text-sm text-center font-semibold text-white">
-        {username}
+        {userInfo ? userInfo.name : 'john doe'}
       </span>
       <span className="text-xs text-center truncate w-full text-white/80">
         {truncatedDesc}

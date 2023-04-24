@@ -6,6 +6,7 @@ import OptionSection from './optionSection';
 interface SidebarProps {
   isOpen: boolean;
   setIsOpen: React.Dispatch<React.SetStateAction<boolean>>;
+  userInfo: any;
 }
 
 const username: string = 'john doe';
@@ -15,7 +16,7 @@ const description =
 const words = description.split(' ').slice(0, 8);
 const truncatedDesc: string = words.join(' ');
 
-const Sidebar = ({ isOpen, setIsOpen }: SidebarProps) => {
+const Sidebar = ({ isOpen, setIsOpen, userInfo }: SidebarProps) => {
   return (
     <div
       className={`static w-full h-full lg:w-1/5 lg:flex lg:flex-col lg:justify-between border shadow-inner shadow-gray-700 overflow-y-scroll ${
@@ -39,10 +40,10 @@ const Sidebar = ({ isOpen, setIsOpen }: SidebarProps) => {
       {/* for large screen */}
       <ProfileSection
         avatar={avatar}
-        username={username}
         truncatedDesc={truncatedDesc}
+        userInfo={userInfo}
       />
-      <OptionSection />
+      <OptionSection userInfo={userInfo}/>
       <FooterSection avatar={avatar} />
       {/* for large screen */}
     </div>

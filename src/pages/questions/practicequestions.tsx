@@ -33,7 +33,7 @@ const Practicequest = ({ questions }: Props) => {
 
   if (error) {
     return (
-      <div className="bg-[#050816] text-white flex justify-center items-center text-center">
+      <div className="bg-[#050816] h-screen text-white flex justify-center items-center text-center">
         Failed to Fetch question 😥
       </div>
     );
@@ -41,7 +41,7 @@ const Practicequest = ({ questions }: Props) => {
 
   if (!questions.length) {
     return (
-      <div className="bg-[#050816] text-white flex justify-center items-center text-center">
+      <div className="bg-[#050816] h-screen text-white flex justify-center items-center text-center">
         Loading... ⚙️
       </div>
     );
@@ -103,7 +103,7 @@ export async function getStaticProps() {
   try {
     const isVercel = process.env.VERCEL === '1';
     const url = isVercel
-      ? 'https://ide-main.vercel.app/api/leetcode'
+      ? 'https://universal-ide.vercel.app//api/leetcode'
       : 'http://localhost:3000/api/leetcode';
     const response = await axios.get(url);
     const questions = response.data.slice(0, 100);

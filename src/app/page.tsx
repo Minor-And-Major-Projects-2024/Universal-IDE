@@ -1,5 +1,4 @@
 import Homepage from '@/components/homepage/homepage';
-import { useRouter } from 'next/router';
 
 export default function Home() {
   return (

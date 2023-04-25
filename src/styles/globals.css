@@ -2,24 +2,12 @@
 @tailwind components;
 @tailwind utilities;
 
-/* body {
-  margin: 0;
-  padding: 0;
-  font-family: 'Roboto', sans-serif;
-  height: 100%;
-  width: 100%;
-} */
 @media screen and (min-width: 100px) and (max-width: 420px) {
   .divider {
     display: none;
   }
   .navbar {
-    /* background-color: lightblue; */
   }
-  /* .auth_body {
-    height: 100%;
-    padding: 40px;
-  } */
   .auth_in_body {
     padding: 40px;
   }
@@ -32,7 +20,6 @@
     display: none;
   }
   .navbar {
-    /* background-color: green; */
   }
   .auth_body {
     height: 100vh;
@@ -43,7 +30,6 @@
     display: none;
   }
   .navbar {
-    /* background-color: red; */
   }
   .auth_body {
     height: 100vh;
@@ -54,12 +40,10 @@
     display: none;
   }
   .navbar {
-    /* background-color: purple; */
   }
 }
 @media screen and (min-width: 1024px) {
   .divider {
-    /* background-color: orange; */
   }
   .navbar {
     display: none;
@@ -95,7 +79,6 @@
   );
 }
 
-/* Define the scrollbar strip style */
 ::-webkit-scrollbar-button {
   width: 0;
   height: 0;

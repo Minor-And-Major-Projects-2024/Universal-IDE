@@ -8,14 +8,14 @@
   padding: 0;
   height: 100%;
   background: #000;
-  color: red;
+  color: white;
   border: 4px solid rgb(9, 132, 255);
   border-radius: 5px;
 }
 
 .editorhead {
   background: transparent;
-  color: #040cfe;
+  color: white;
   border: 4px solid rgb(21, 255, 9);
   text-align: center;
   justify-content: space-between;
@@ -27,7 +27,7 @@
 }
 
 .editorhead span {
-  color: red;
+  color: white;
 }
 .editorhead h1 {
   font-size: 1.2rem;
@@ -66,6 +66,7 @@
   flex-direction: row;
   overflow: hidden;
 }
+
 .resultpara {
   text-align: center;
   margin: 2px;
@@ -91,7 +92,7 @@
 
 .btn {
   background: #03f9c0;
-  color: #ff0202;
+  color: black;
   border: 3px solid #fb73038e;
   border-radius: 5px;
   padding: 5px;

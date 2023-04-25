@@ -9,7 +9,7 @@ interface SidebarProps {
   userInfo: any;
 }
 
-const username: string = 'john doe';
+const username: string = 'John Doe';
 const avatar: string = 'https://avatars.githubusercontent.com/u/101614183?v=4';
 const description =
   'Only 8 words max limit is applied to the desasdasdasdasdasdasdascription. and more than that will be truncated.';

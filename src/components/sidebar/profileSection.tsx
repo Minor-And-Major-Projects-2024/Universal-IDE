@@ -27,7 +27,7 @@ const ProfileSection = ({
         className="rounded-full border-2 border-solid border-[#915EFF] hover:shadow-2xl hover:shadow-[#915EFF]"
       />
       <span className="text-sm text-center font-semibold text-white">
-        {userInfo ? userInfo.name : 'john doe'}
+        {userInfo ? userInfo.name : 'John Doe'}
       </span>
       <span className="text-xs text-center truncate w-full text-white/80">
         {truncatedDesc}

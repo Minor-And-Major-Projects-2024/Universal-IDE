@@ -22,7 +22,7 @@ const FooterSection = ({ avatar }: FooterSectionProps) => {
           className="rounded-full border-2 border-solid border-[#915EFF] hover:shadow-xl hover:shadow-[#915EFF]"
         />
         <span className="text-xs text-center text-white mt-1">
-          IDE <br /> <span className="text-white/80">@mstomar698</span>
+          IDE <br /> <span className="text-white/80">@helloxyz</span>
         </span>
       </div>
       <div

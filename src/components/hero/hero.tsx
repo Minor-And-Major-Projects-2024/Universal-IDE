@@ -6,7 +6,7 @@ type HeroProps = {
   userInfo: any;
 };
 
-const username: string = 'john doe';
+const username: string = 'John Doe';
 const Hero = ({ userInfo }: HeroProps) => {
   return (
     <div className="static w-full h-full lg:w-4/5 lg:flex lg:flex-col lg:justify-between border shadow-inner shadow-gray-700 overflow-hidden">

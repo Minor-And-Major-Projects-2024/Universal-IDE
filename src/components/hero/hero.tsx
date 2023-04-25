@@ -13,7 +13,7 @@ const Hero = ({ userInfo }: HeroProps) => {
       <Navbar username={userInfo ? userInfo.name : username} />
       <Language />
       <Divider username={userInfo ? userInfo.name : username} />
-      <Environment />
+      <Environment userInfo={userInfo}/>
     </div>
   );
 };

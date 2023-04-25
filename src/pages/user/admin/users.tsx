@@ -112,6 +112,7 @@ export default function UserListScreen(): JSX.Element {
         dispatch({ type: 'DELETE_SUCCESS' });
       } catch (err: any) {
         toast.error(getError(err));
+        alert('User deletion failed 😥 \n' + getError(err))
         dispatch({
           type: 'DELETE_FAIL',
         });

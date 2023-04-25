@@ -1,4 +1,5 @@
 import '../../styles/globals.css';
+import 'react-toastify/dist/ReactToastify.css';
 import { useContext, useEffect, useState } from 'react';
 import { useRouter } from 'next/router';
 import Axios from 'axios';
@@ -24,6 +25,7 @@ const SignupScreen = () => {
     e.preventDefault();
     if (password !== confirmPassword) {
       toast.error('Passwords do not match');
+      alert('Passwords do not match ❌')
       return;
     }
     try {
@@ -40,6 +42,7 @@ const SignupScreen = () => {
       router.push(redirect || '/');
     } catch (err: any) {
       toast.error(getError(err));
+      alert('Failed 😥 Try Again!! \n' + getError(err))
     }
   };
 

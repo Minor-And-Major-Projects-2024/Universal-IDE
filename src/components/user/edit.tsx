@@ -1,5 +1,6 @@
 'use client';
 import '../../styles/globals.css';
+import 'react-toastify/dist/ReactToastify.css';
 import React, { useContext, useEffect, useReducer, useState } from 'react';
 import { toast } from 'react-toastify';
 import axios from 'axios';
@@ -101,13 +102,23 @@ const UserEditScreen: React.FC = ({ query }: any) => {
       window.location.href = '/admin/users';
     } catch (err: any) {
       toast.error(getError(err));
+      alert('User updation failed \n' + getError(err));
       dispatch({ type: 'UPDATE_FAIL' });
     }
   };
 
   return (
     <div className="bg-[#050816] h-screen border p-0.5 overflow-hidden max-sm:p-4">
-      <div className="container mx-auto max-w-md border-2 shadow-2xl p-4 rounded-lg mt-24">
+      <div className="w-full shadow-xl flex justify-between px-8 my-2 py-1">
+        <Link href={'/'} className="text-white font-bold shadow-xl text-3xl ">
+          {' '}
+          IDE
+        </Link>
+        <span className="text-3xl font-bold text-center px-8 text-white/50">
+          Edit User
+        </span>
+      </div>
+      <div className="container mx-auto max-w-md border-2 shadow-2xl p-4 rounded-lg mt-24 overflow-x-auto">
         <h1 className="text-2xl font-bold mb-4">Edit User {userId}</h1>
         {loading ? (
           <p>Loading...</p>

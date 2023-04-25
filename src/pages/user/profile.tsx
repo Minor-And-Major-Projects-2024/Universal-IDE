@@ -1,5 +1,6 @@
 'use client';
 import '../../styles/globals.css';
+import 'react-toastify/dist/ReactToastify.css';
 import React, { useContext, useReducer, useState } from 'react';
 import { toast } from 'react-toastify';
 import axios from 'axios';
@@ -45,6 +46,7 @@ const ProfileScreen = () => {
     e.preventDefault();
     if (password !== confirmPassword) {
       toast.error('Passwords do not match');
+      alert('Passwords do not match')
       return;
     }
     try {
@@ -69,11 +71,13 @@ const ProfileScreen = () => {
       ctxDispatch({ type: 'USER_SIGNIN', payload: data });
       localStorage.setItem('userInfo', JSON.stringify(data));
       toast.success('User updated successfully');
+      alert('User updated successfully 😁')
     } catch (err: any) {
       dispatch({
         type: 'UPDATE_FAIL',
       });
       toast.error(getError(err));
+      alert('User updation failed 😥 \n' + getError(err))
     }
   };
 

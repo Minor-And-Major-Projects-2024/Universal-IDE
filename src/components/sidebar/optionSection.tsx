@@ -74,11 +74,11 @@ const OptionSection = ({ userInfo }: OptionSectionProps) => {
               </Link>
             </>
           )}
-          <div className="w-full p-0.5 py-1 px-8 flex flex-row justify-between items-center bg-[#1d1836] border rounded-lg hover:shadow-xl hover:shadow-[#915EFF]">
-            <div
-              onClick={signoutHandler}
-              className="flex flex-row space-x-2 items-center justify-center text-center"
-            >
+          <div
+            onClick={signoutHandler}
+            className="w-full p-0.5 py-1 px-8 flex flex-row justify-between items-center bg-[#1d1836] border rounded-lg hover:shadow-xl hover:shadow-[#915EFF]"
+          >
+            <div className="flex flex-row space-x-2 items-center justify-center text-center">
               <RiLoginBoxLine className="w-6 h-6 text-white transition duration-150 ease-in-out" />
               <span className="text-white text-lg px-auto">SignOut</span>
             </div>

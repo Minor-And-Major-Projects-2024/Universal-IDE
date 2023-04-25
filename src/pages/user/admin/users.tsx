@@ -120,64 +120,80 @@ export default function UserListScreen(): JSX.Element {
   };
 
   return (
-    <div className="bg-[#050816] h-screen border p-0.5 overflow-hidden">
+    <div className="bg-[#050816] h-screen border p-4 md:p-8 overflow-auto">
       <div className="w-full shadow-xl flex justify-between px-2 mb-2 py-1">
         <Link href={'/'} className="text-white font-bold shadow-xl text-3xl ">
           {' '}
           IDE
         </Link>
-        <span className="text-3xl font-bold text-center pr-8">Users</span>
+        <span className="text-3xl font-bold text-center px-8 text-white/50">
+          Users
+        </span>
       </div>
-      <div className="p-4 lg:h-[670px] md:h-[620px] sm:h-[600px] max-sm:h-[600px] w-full overflow-auto border">
-        {loadingDelete && <p className="text-center">Deleting...</p>}
-        {loading ? (
-          <p className="text-center">Loading...</p>
-        ) : error ? (
-          <p className="text-red-600 text-center">{error}</p>
-        ) : (
-          <table className="table-auto w-full text-center rounded-lg p-2 shadow-xl shadow-[#915EFF]">
-            <thead className="rounded-t-lg ">
-              <tr className="bg-[#1d1836] text-white/80  rounded-t-lg ">
-                <th className="p-2 text-center rounded-tl-lg shadow-lg">ID</th>
-                <th className="p-2 text-center shadow-lg">NAME</th>
-                <th className="p-2 text-center shadow-lg">EMAIL</th>
-                <th className="p-2 text-center shadow-lg">IS ADMIN</th>
-                <th className="p-2 text-center rounded-tr-lg shadow-lg">
-                  ACTIONS
-                </th>
-              </tr>
-            </thead>
-            <tbody className="rounded-lg overflow-hidden">
-              {users.map((user: User) => (
-                <tr key={user._id} className="">
-                  <td className="p-2 rounded-bl-lg bg-[#1d1836]">{user._id}</td>
-                  <td className="p-2 bg-[#1d1836]">{user.name}</td>
-                  <td className="p-2 bg-[#1d1836]">{user.email}</td>
-                  <td className="p-2 bg-[#1d1836]">
-                    {user.isAdmin ? 'YES' : 'NO'}
-                  </td>
-                  <td className="p-2 rounded-br-lg bg-[#1d1836]">
-                    <button
-                      type="submit"
-                      className="bg-[#050816] hover:shadow-xl hover:shadow-[#915EFF] px-2 py-1 rounded m-1"
-                      onClick={() =>
-                        (window.location.href = `/user/${user._id}`)
-                      }
-                    >
-                      Edit
-                    </button>
-                    <button
-                      className="bg-[#050816] hover:shadow-xl hover:shadow-[#915EFF] px-2 py-1 rounded m-1"
-                      onClick={() => deleteHandler(user)}
-                    >
-                      Delete
-                    </button>
-                  </td>
+      <div>
+        <div className="border-2 border-gray-800 rounded-lg p-4 text-red-500 lg:h-[600px] overflow-auto h-full max-sm:h-max shadow-inner shadow-[#915EFF]">
+          {loadingDelete && (
+            <p className="h-screen p-8 bg-[#050816] flex items-center justify-center text-3xl text-white">
+              Deleting...
+            </p>
+          )}
+          {loading ? (
+            <p className="h-screen p-8 bg-[#050816] flex items-center justify-center text-3xl text-white">
+              Loading...
+            </p>
+          ) : error ? (
+            <p className="h-screen p-8 bg-[#050816] flex items-center justify-center text-3xl text-white">
+              {error}
+            </p>
+          ) : (
+            <table className="table-auto w-full text-center rounded-lg p-2 bg-[#1d1836] hover:shadow-xl hover:shadow-[#915EFF]">
+              <thead className="rounded-t-lg ">
+                <tr className="bg-[#1d1836] text-white/80  rounded-t-lg ">
+                  <th className="p-2 text-center rounded-tl-lg shadow-lg">
+                    ID
+                  </th>
+                  <th className="p-2 text-center shadow-lg">NAME</th>
+                  <th className="p-2 text-center shadow-lg">EMAIL</th>
+                  <th className="p-2 text-center shadow-lg">IS ADMIN</th>
+                  <th className="p-2 text-center rounded-tr-lg shadow-lg">
+                    ACTIONS
+                  </th>
                 </tr>
-              ))}
-            </tbody>
-          </table>
-        )}
+              </thead>
+              <tbody className="rounded-lg overflow-hidden">
+                {users.map((user: User) => (
+                  <tr key={user._id} className="text-white/50">
+                    <td className="p-2 rounded-bl-lg bg-[#1d1836]">
+                      {user._id}
+                    </td>
+                    <td className="p-2 bg-[#1d1836]">{user.name}</td>
+                    <td className="p-2 bg-[#1d1836]">{user.email}</td>
+                    <td className="p-2 bg-[#1d1836]">
+                      {user.isAdmin ? 'YES' : 'NO'}
+                    </td>
+                    <td className="p-2 rounded-br-lg bg-[#1d1836]">
+                      <button
+                        type="submit"
+                        className="bg-[#050816] hover:shadow-xl hover:shadow-[#915EFF] px-2 py-1 rounded m-1"
+                        onClick={() =>
+                          (window.location.href = `/user/${user._id}`)
+                        }
+                      >
+                        Edit
+                      </button>
+                      <button
+                        className="bg-[#050816] hover:shadow-xl hover:shadow-[#915EFF] px-2 py-1 rounded m-1"
+                        onClick={() => deleteHandler(user)}
+                      >
+                        Delete
+                      </button>
+                    </td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          )}
+        </div>
       </div>
     </div>
   );

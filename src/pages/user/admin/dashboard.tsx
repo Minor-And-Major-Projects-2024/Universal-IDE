@@ -102,38 +102,41 @@ const DashboardScreen: React.FC = () => {
 
   const sum = usersData.reduce((acc, curr) => acc + curr, 0);
   return (
-    <div className="h-full p-4 md:p-8 bg-[#050816] \h-screen border overflow-hidden">
+    <div className="h-screen p-4 md:p-8 bg-[#050816] border overflow-auto">
       <div className="container mx-auto px-2 md:px-4 py-4 md:py-6">
-      <div className="w-full shadow-xl flex justify-start space-x-4 px-2 mb-2 py-1">
-        <Link href={'/'} className="text-white font-bold shadow-xl text-3xl ">
-          {' '}
-          IDE
-        </Link>
-        <span className="text-3xl font-bold text-center pr-8">DashBoard</span>
-      </div>
+        <div className="w-full shadow-xl flex justify-start space-x-4 px-2 mb-2 py-1">
+          <Link href={'/'} className="text-white font-bold shadow-xl text-3xl ">
+            {' '}
+            IDE
+          </Link>
+          <span className="text-2xl font-bold text-center px-4 mt-1 text-white/70">
+            DashBoard
+          </span>
+        </div>
         <div className="flex flex-col sm:flex-row justify-between items-center mb-4 md:mb-6">
-          <h2 className="text-lg max-sm:text-base font-bold mb-2">
-            Total Users: {sum}
+          <h2 className="text-lg max-sm:text-base font-bold mb-2 text-white/80 ">
+            Total Users:
+            <span className="text-white ml-2">{sum}</span>
           </h2>
           <div className="flex items-center">
-            <FaUser className="mr-2" />
+            <FaUser className="mr-2 mb-1" />
             <p className="text-lg max-sm:text-base font-bold m-0.5">
               {userInfo ? <>{userInfo.name}</> : 'john doe'}
             </p>
           </div>
         </div>
         {loading ? (
-          <div className="h-screen p-8 bg-gray-50 flex items-center justify-center">
+          <div className="h-screen p-8 bg-[#050816] flex items-center justify-center text-3xl text-white">
             Loading...
           </div>
         ) : error ? (
-          <div className="h-screen p-8 bg-gray-50 flex items-center justify-center text-red-600">
+          <div className="h-screen p-8 bg-[#050816] flex items-center justify-center text-white text-3xl">
             {error}
           </div>
         ) : (
-          <div className="h-full">
-            <div className="border-2 border-gray-800 rounded-lg p-4 text-red-500 h-full">
-              <Bar data={data} options={options} width={400} height={400} />
+          <div className="">
+            <div className="border-2 border-gray-800 rounded-lg p-4 text-red-500 lg:h-[600px] h-full max-sm:h-max shadow-inner shadow-[#915EFF]">
+              <Bar data={data} options={options} height={600} width={600} />
             </div>
           </div>
         )}

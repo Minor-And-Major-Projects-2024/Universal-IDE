@@ -1,4 +1,5 @@
 'use client';
+import 'react-toastify/dist/ReactToastify.css';
 import { Store } from '@/store';
 import React, { useState, useContext } from 'react';
 import { BsArrowBarRight } from 'react-icons/bs';
@@ -25,7 +26,7 @@ class ErrorBoundary extends React.Component<Props, State> {
 
   render() {
     if (this.state.hasError) {
-      return <h1>Something went wrong.</h1>;
+      return <div className='bg-[#050816] text-white flex justify-center items-center text-center'>Something went wrong.</div>;
     }
 
     return this.props.children;

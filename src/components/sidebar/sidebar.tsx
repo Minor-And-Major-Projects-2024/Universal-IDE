@@ -20,7 +20,9 @@ const Sidebar = ({ isOpen, setIsOpen, userInfo }: SidebarProps) => {
   return (
     <div
       className={`static w-full h-full lg:w-1/5 lg:flex lg:flex-col lg:justify-between border shadow-inner shadow-gray-700 overflow-y-scroll ${
-        isOpen ? 'bg-[#050816] h-screen fixed top-0 left-0 overflow-hidden' : 'hidden'
+        isOpen
+          ? 'bg-[#050816] h-screen fixed top-0 left-0 overflow-hidden flex flex-col md:px-20 sm:px-8 max-sm:px-12 scroll_body justify-around'
+          : 'hidden'
       }`}
     >
       {/* for below-medium screen */}
@@ -43,7 +45,7 @@ const Sidebar = ({ isOpen, setIsOpen, userInfo }: SidebarProps) => {
         truncatedDesc={truncatedDesc}
         userInfo={userInfo}
       />
-      <OptionSection userInfo={userInfo}/>
+      <OptionSection userInfo={userInfo} />
       <FooterSection avatar={avatar} />
       {/* for large screen */}
     </div>

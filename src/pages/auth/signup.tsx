@@ -1,4 +1,5 @@
 import '../../styles/globals.css';
+import 'react-toastify/dist/ReactToastify.css';
 import { useContext, useEffect, useState } from 'react';
 import { useRouter } from 'next/router';
 import Axios from 'axios';
@@ -24,6 +25,7 @@ const SignupScreen = () => {
     e.preventDefault();
     if (password !== confirmPassword) {
       toast.error('Passwords do not match');
+      alert('Passwords do not match ❌')
       return;
     }
     try {
@@ -40,6 +42,7 @@ const SignupScreen = () => {
       router.push(redirect || '/');
     } catch (err: any) {
       toast.error(getError(err));
+      alert('Failed 😥 Try Again!! \n' + getError(err))
     }
   };
 
@@ -50,12 +53,15 @@ const SignupScreen = () => {
   }, [router, redirect, userInfo]);
 
   return (
-
-    <div
-      className="h-screen p-6 md:p-28"
-     
-    >
-      <div className="max-w-md mx-auto p-16 md:p-12 border-2 hover:border-4 hover:border-gray-700 rounded shadow-xl">
+    <div className="bg-[#050816] border shadow-inner shadow-gray-700 h-full p-6 md:p-28">
+      <div className="p-16 md:p-12 bg-[#1d1836] max-w-md mx-auto border rounded-lg hover:shadow-xl hover:shadow-[#915EFF] auth_in_body">
+        <div
+          onClick={() => router.push('/')}
+          className="text-white font-bold shadow-xl text-center text-3xl mb-2 p-0.5"
+        >
+          {' '}
+          Universal IDE
+        </div>
         <form onSubmit={submitHandler}>
           <div className="mb-6">
             <label
@@ -127,14 +133,14 @@ const SignupScreen = () => {
           </div>
           <button
             type="submit"
-            className="w-full bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
+            className="w-full bg-[#050816] hover:shadow-2xl hover:shadow-[#915EFF] text-white font-bold py-2 px-4 my-2 rounded"
           >
             Sign Up
           </button>
-          <div className="my-3">
+          <div className="my-3 text-white/50">
             Already have an account?{' '}
             <Link href={`/auth/signin?redirect=${redirect}`}>
-              <span className="text-blue-500 font-semibold">Sign-In</span>
+              <span className="text-white font-semibold">Sign-In</span>
             </Link>
           </div>
         </form>

@@ -1,13 +1,34 @@
 import { envs } from '@/lib/env-map';
 import Link from 'next/link';
 
-export const Environment = () => {
+type EnvProps = {
+  userInfo: any;
+};
+
+export const Environment = ({ userInfo }: EnvProps) => {
+  const showAuthMessage = () => {
+    return (
+      <>
+        
+        {userInfo
+          ? ''
+          : alert('Please login to create your own virtual environment')}
+      </>
+    );
+  };
   return (
-    <div className="static h-3/6 space-y-2 items-center py-8 px-4">
+    <div
+      className="static h-3/6 space-y-2 items-center py-8 px-4"
+      onClick={showAuthMessage}
+    >
       <h1 className="text-xl text-start px-2 max-sm:text-sm font-semibold text-white">
         Create your own virtaul environment using
       </h1>
-      <div className="flex flex-wrap justify-evenly lg:h-36 lg:overflow-y-auto sm:h-full shadow-xl shadow-[#1d1836] rounded-lg p-4">
+      <div
+        className={`flex flex-wrap justify-evenly lg:h-36 lg:overflow-y-auto sm:h-full shadow-xl shadow-[#1d1836] rounded-lg p-4 ${
+          userInfo ? '' : 'pointer-events-none'
+        }`}
+      >
         {Object.keys(envs)
           .sort((a, b) => (envs[b].name > envs[a].name ? -1 : 1))
           .map((env, i) => (
@@ -17,7 +38,7 @@ export const Environment = () => {
                   <h2 className="text-lg text-white/80 text-center font-bold mb-2">
                     {envs[env].name}
                   </h2>
-                  <p className="hidden sm:block text-white/50 text-sm">
+                  <p className="block text-white/50 text-sm">
                     {envs[env].desc}
                   </p>
                 </div>

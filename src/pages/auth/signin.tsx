@@ -1,4 +1,5 @@
 import '../../styles/globals.css';
+import 'react-toastify/dist/ReactToastify.css';
 import { useContext, useEffect, useState } from 'react';
 import { useRouter } from 'next/router';
 import Axios from 'axios';
@@ -34,6 +35,7 @@ const SigninScreen = () => {
       router.push(redirect || '/');
     } catch (err: any) {
       toast.error(getError(err));
+      alert('Failed 😥 Try Again!! \n' + getError(err))
     }
   };
 
@@ -43,43 +45,17 @@ const SigninScreen = () => {
       setUserInfo(JSON.parse(storedUserInfo));
     }
   }, []);
-  // const router = useRouter();
-  // const redirectInUrl = router.query.redirect as string;
-  // const redirect = redirectInUrl ? redirectInUrl : '/';
-
-  // const [email, setEmail] = useState<string>('');
-  // const [password, setPassword] = useState<string>('');
-
-  // const { state, dispatch: ctxDispatch } = useContext(Store);
-  // const { userInfo } = state;
-
-  // const submitHandler = async (e: React.FormEvent<HTMLFormElement>) => {
-  //   e.preventDefault();
-  //   try {
-  //     const { data } = await Axios.post<{ email: string; password: string }>(
-  //       'https://descriptive-bubble-production.up.railway.app/auth/signin',
-  //       { email, password }
-  //     );
-  //     ctxDispatch({ type: 'USER_SIGNIN', payload: data });
-  //     // localStorage.setItem('userInfo', JSON.stringify(data));
-  //     if (typeof window !== 'undefined') {
-  //       localStorage.setItem('userInfo', JSON.stringify(data));
-  //     }
-  //     // router.push(redirect || '/');
-  //   } catch (err: any) {
-  //     toast.error(getError(err));
-  //   }
-  // };
-
-  // useEffect(() => {
-  //   if (userInfo) {
-  //     // router.push(redirect);
-  //   }
-  // }, [router, redirect, userInfo]);
 
   return (
-    <div className="h-screen p-6 md:p-32">
-      <div className="max-w-md mx-auto border-2 hover:border-4 hover:border-gray-700 rounded shadow-xl p-20">
+    <div className="bg-[#050816] border shadow-inner shadow-gray-700 lg:h-screen md:h-full max-sm:h-screen auth_body p-6 md:p-32">
+      <div className="bg-[#1d1836] max-w-md mx-auto border rounded-lg hover:shadow-xl hover:shadow-[#915EFF] p-20 auth_in_body">
+        <div
+          onClick={() => router.push('/')}
+          className="text-white font-bold shadow-xl text-center text-3xl mb-2 p-0.5"
+        >
+          {' '}
+          Universal IDE
+        </div>
         <form onSubmit={submitHandler}>
           <div className="mb-6">
             <label
@@ -117,14 +93,14 @@ const SigninScreen = () => {
           </div>
           <button
             type="submit"
-            className="w-full bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
+            className="w-full bg-[#050816] hover:shadow-2xl hover:shadow-[#915EFF] text-white font-bold py-2 px-4 my-2 rounded"
           >
             Sign In
           </button>
-          <div className="my-3">
+          <div className="my-3 text-white/50">
             New customer?{' '}
             <Link href={`/auth/signup?redirect=${redirect}`}>
-              <span className="text-blue-500 font-semibold">
+              <span className="text-white font-semibold">
                 Create your account
               </span>
             </Link>

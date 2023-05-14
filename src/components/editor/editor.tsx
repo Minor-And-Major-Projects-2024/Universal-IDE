@@ -4,6 +4,7 @@ import Editor from '@monaco-editor/react';
 export default function CodeEditorWriter({
   setValue,
   runCode,
+  theme,
   ...props
 }: any): JSX.Element {
   function handleEditorDidMount(editor: any, monaco: any) {
